@@ -1,0 +1,33 @@
+# IDE files
+.vscode/
+.idea/
+
+# Node.js dependencies
+node_modules/
+
+# Build directories
+build/
+dist/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Environment files (if any)
+*.env
+
+# Docker files
+*.dockerfile
+
+# Coverage reports
+coverage/
+
+# IntelliJ files
+*.iml
+
+# npm package-lock and yarn lock files (if you're using yarn, use one)
+npm-debug.log*
+yarn-error.log

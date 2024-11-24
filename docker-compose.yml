@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+  jtabackend:
+    image: jtabackend
+    build:
+      context: ./backend/jtabackend                     # Points to the root directory for the backend
+      dockerfile: Dockerfile       # Dockerfile path in the root directory
+    ports:
+      - 8080:8080                    # Maps host port 8080 to container port 8080
+
+  jobtrackerfrontend:
+    image: jobtrackerfrontend
+    build:
+      context: ./frontend/job-tracker-frontend  # Points to the frontend directory
+      dockerfile: Dockerfile       # Dockerfile path inside the frontend directory
+    environment:
+      NODE_ENV: production           # Sets environment variable for production mode
+    ports:
+      - 3000:3000                    # Maps host port 3000 to container port 3000
