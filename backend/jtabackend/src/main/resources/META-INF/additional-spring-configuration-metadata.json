@@ -1,0 +1,17 @@
+{"properties": [
+  {
+    "name": "spring.gmail.client-id",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.gmail.client-id'"
+  },
+  {
+    "name": "spring.gmail.client-secret",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.gmail.client-secret'"
+  },
+  {
+    "name": "spring.gmail.redirect-uri",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.gmail.redirect-uri'"
+  }
+]}

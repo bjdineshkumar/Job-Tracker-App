@@ -4,17 +4,39 @@ services:
   jtabackend:
     image: jtabackend
     build:
-      context: ./backend/jtabackend                     # Points to the root directory for the backend
-      dockerfile: Dockerfile       # Dockerfile path in the root directory
+      context: ./backend/jtabackend       # Backend directory
+      dockerfile: Dockerfile              # Dockerfile for backend
     ports:
-      - 8080:8080                    # Maps host port 8080 to container port 8080
+      - 8080:8080                         # Maps host port 8080 to container port 8080
+    environment:
+      - PYTHON_SCRIPT_PATH=/app/ml_scripts/email_parser.py  # Path to Python script in the container
+      - FLASK_SERVICE_URL=http://flask-service:5000         # Flask service URL
+    depends_on:
+      - flask-service                      # Ensures Flask starts before backend
+    networks:
+      - app-network                        # Connects to the shared network
+
+  flask-service:
+    build:
+      context: ./backend/jtabackend/ml_scripts  # Flask service directory
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    networks:
+      - app-network                        # Connects to the shared network
 
   jobtrackerfrontend:
     image: jobtrackerfrontend
     build:
-      context: ./frontend/job-tracker-frontend  # Points to the frontend directory
-      dockerfile: Dockerfile       # Dockerfile path inside the frontend directory
+      context: ./frontend/job-tracker-frontend  # Frontend directory
+      dockerfile: Dockerfile                    # Dockerfile for frontend
     environment:
-      NODE_ENV: production           # Sets environment variable for production mode
+      NODE_ENV: production                      # Sets production mode
     ports:
-      - 3000:3000                    # Maps host port 3000 to container port 3000
+      - 3000:3000                               # Maps host port 3000 to container port 3000
+    networks:
+      - app-network                        # Connects to the shared network
+
+networks:
+  app-network:
+    driver: bridge                          # Bridge network for inter-service communication

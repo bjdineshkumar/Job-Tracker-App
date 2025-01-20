@@ -1,0 +1,17 @@
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Align items to each end */
+    align-items: center;            /* Vertically center-align the text */
+    background-color: #f1f1f1;
+    padding: 15px 20px;             /* Horizontal padding for spacing */
+    width: 100%;
+    bottom: 0;
+    border-top: 1px solid #ccc;
+    box-sizing: border-box;
+    white-space: normal;
+  }
+  
+  .footer-left, .footer-right {
+    color: #555;
+    font-size: 14px;
+  }

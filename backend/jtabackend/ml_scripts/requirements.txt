@@ -1,0 +1,10 @@
+torch==2.0.1
+transformers==4.46.0
+numpy<2.0
+python-Levenshtein
+fuzzywuzzy
+flask
+flask_cors
+spacy
+PyPDF2
+python-docx

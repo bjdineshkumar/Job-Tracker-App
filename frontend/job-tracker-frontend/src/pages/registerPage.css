@@ -1,0 +1,52 @@
+/* Style the container to center content */
+.outer-contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:  0px 0px 50px 0px ;
+    padding: 0px;   /* Light background */
+  }
+  
+  .register-image {
+    width: 100%;                   /* Responsive image */
+    max-width: 1000px;             /* Limit max width */
+             /* Space below the image */
+  }
+
+  .contact-left {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .contact-left img {
+    width: 100%;
+    max-width: 700px; /* Ensure the image is not too large */
+    height: 100%;
+  }
+  
+  /* Optional: Add global body styles for consistency */
+  body {
+    background-color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  /* Media Query for Smaller Mobile Devices */
+  @media (max-width: 480px) {
+    .register-image {
+      max-width: 100%;
+    }
+  
+    .contact-left img {
+      max-width: 100%;
+    }
+  
+    h2, h3 {
+      font-size: 20px;
+    }
+  
+    .submit-button-class {
+      width: 80%;
+    }
+  }
+  

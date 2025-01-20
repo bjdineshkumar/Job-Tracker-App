@@ -11,3 +11,15 @@ services:
     ports:
       - 8080:8080
       - 5005:5005
+
+  jobtrackerfrontend:
+    image: jobtrackerfrontend
+    build:
+      context: job-tracker-frontend
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: development
+    ports:
+      - 3000:3000
+      - 9229:9229
+    command: ["node", "--inspect=0.0.0.0:9229", "index.js"]

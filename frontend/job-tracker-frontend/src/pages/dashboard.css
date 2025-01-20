@@ -1,0 +1,54 @@
+/* Main container for the dashboard layout */
+.dashboard-layout-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #f8f9fa; /* Light background */
+  height: 100vh;
+}
+
+/* Styling for the navigation section */
+.navigation {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* General typography for page headings */
+.page-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Styling for the content section */
+.content-section {
+  flex-grow: 1;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Aligning content inside content section */
+.content-section > .MuiTypography-root {
+  text-align: left;
+  color: #555;
+}
+
+/* Centered loader */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Styling for JobTable wrapper */
+.job-table-container {
+  margin-top: 20px;
+  padding: 20px;
+}
