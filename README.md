@@ -1,5 +1,8 @@
 # Job Tracker Application
 
+[Job Tracker Application Initial Documentation](Job_Tracker_application_documentation.pdf)
+
+
 ## Overview
 The **Job Tracker Application** is a full-stack web application designed to streamline the job application process for users. It provides features to log, track, and manage job applications, while integrating with Gmail to automatically extract relevant details. Additionally, the application incorporates a Flask-based machine learning model to analyze email content from Gmail and extract key points such as job positions and application details. Built with React, Spring Boot, MongoDB, Flask, and Material-UI, this application offers a scalable and user-friendly solution for job seekers.
 
